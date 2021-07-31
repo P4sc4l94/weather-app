@@ -1,8 +1,13 @@
 // -- VARIABLES --
+// if (process.env.NODE_ENV !== "production") {
+//   require('dotenv').config();
+// }
+
 
 const form = document.querySelector("form");
 const input = document.querySelector("input");
 const apiKey = "fabdfa6cd0ad87ac4287275cb1c57944";
+// const apiKey = process.env.API_KEY;
 //const test = document.querySelector("#test");
 const msg = document.querySelector(".msg");
 const list = document.querySelector(".cities");
@@ -59,14 +64,14 @@ form.addEventListener("submit", e => {
       const li = document.createElement("LI");
       const markup = `
             <div class="row">
-              <div class="col-8 col-sm-12" style="background-color:whitesmoke">
+              <div class="col-8 col-sm-12">
                 <h2 class="city-name" data-name="${name},${sys.country}">
                   <span>${name}</span>
                   <sup>${sys.country}</sup>
                 </h2>
                 <div class="city-temp">${Math.round(main.temp)}<sup>°F</sup></div>
               </div>
-              <div class="col-4 col-sm-12 figure-container" style="background-color:lightpink">
+              <div class="col-4 col-sm-12 figure-container">
                 <figure>
                   <img class="city-icon" src=${icon} alt="${weather[0]['main']}"/>
                   <figcaption>${weather[0]['description']}</figcaption>
