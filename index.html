@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!-- MY STYLES -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <style>
+    html {
+      background: #28045c;
+      background: rgb(34, 0, 136);
+      background: linear-gradient(90deg, rgba(34, 0, 136, 1) 0%, rgba(226, 75, 49, 1) 100%);
+      background-repeat: repeat-y;
+      background-size: cover;
+    }
+  </style>
+
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div class="">
+    <div class='container content-container'>
+      <header class='pt-5 pb-3 heading'>
+        <h1>Weather App</h1>
+        <p class="text-white">Created by K. Hood / Data from <a href="https://openweathermap.org"
+            title="Visit Open Weather's website">Open Weather
+            API</a><br> This demo was created with the help of
+          <a href="https://webdesign.tutsplus.com/tutorials" title="Visit tutsplus website">tutsplus</a>.
+        </p>
+      </header>
+      <section class='form-section'>
+        <form action="">
+          <label class="form-label text-white fs-4" for="searchBox">Enter a city:</label>
+          <input class="form-control" type="text" placeholder="Search for a city" id="searchBox" autofocus>
+          <div class="d-grid gap-2 pt-3">
+            <button class="btn text-white" type="submit">SUBMIT</button>
+          </div>
+        </form>
+      </section>
+      <div class="alert alert-danger mt-3 noDisplay msg-container">
+        <span class="msg"></span>
+      </div>
+      <section class='ajax-section'>
+        <div class='container weather-container'>
+          <ul class='cities row'>
+            <!-- <li class='city'>
+              <div class="row">
+                <div class="col-8 col-sm-12">
+                  <div class='city-name'>
+                    <span>New York, New York</span> <sup>US</sup>
+                  </div>
+                  <div class='city-temp'>
+                    77<sup>F</sup>
+                  </div>
+                </div>
+                <div class="col-4 col-sm-12">
+                  <figure>
+                    <img src="img-placeholder.svg" width="50px" height="auto" alt="">
+                    <figcaption>
+                      Slightly Cloudy
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </li> -->
+            <!-- <li class='city'>
+              <div class="row">
+                <div class="col-8 col-sm-12">
+                  <div class='city-name'>
+                    <span>New York, New York</span> <sup>US</sup>
+                  </div>
+                  <div class='city-temp'>
+                    77<sup>F</sup>
+                  </div>
+                </div>
+                <div class="col-4 col-sm-12">
+                  <figure>
+                    <img src="img-placeholder.svg" width="50px" height="auto" alt="">
+                    <figcaption>
+                      Slightly Cloudy
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- <footer class="container-fluid">
+    <div class='pt-3 text-white footer-text'>
+      <p class="fw-bold">Designed by K. Hood / Support by tutsplus</p>
+      <p>This website was built using Open Weather API, HTML, CSS, JavaScript, and Bootstrap</p>
+  </div>
+  </footer> -->
+  <script src="index.js"></script>
+</body>
+
+</html>

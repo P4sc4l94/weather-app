@@ -1,0 +1,302 @@
+/*
+* -- BASE STYLES --
+*/
+html {
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  /* background: #28045c;
+  background: -webkit-linear-gradient(top left, #28045c, #c33501);
+  background: -moz-linear-gradient(top left, #28045c, #c33501);
+  background: linear-gradient(to bottom right, #28045c, #c33501);
+  background-repeat: no-repeat;
+  background-size: cover; */
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.content-container {
+  /* width: 80%; */
+  margin: 0 auto;
+  /*background-color: thistle;*/
+}
+
+.heading {
+  padding: 10px 5px 5px 5px;
+  border-bottom: 4px solid white;
+}
+
+h1{
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul, li{
+  list-style-type: none;
+  list-style-position:inside;
+  margin:0;
+  padding:0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a, a:visited{
+  color: yellow;
+  text-decoration: none;
+}
+
+a:hover{
+  color:orange;
+  text-decoration: underline;
+}
+
+a:active{
+  text-decoration: none;
+  color: gold;
+}
+
+/*
+* -- TEXT STYLES --
+*/
+h1 {
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.15rem;
+}
+
+/*
+* -- FORM STYLES --
+*/
+.form-section {
+  margin-top: 20px;
+}
+
+form {
+  margin: 0 auto;
+}
+input[type="text"] {
+  width: 80%;
+  font-size: 1.75rem;
+  padding: 3px;
+  outline: none;
+  border: none;
+}
+button[type="submit"] {
+  width: 20%;
+  min-width: 120px;
+  background-color: tomato;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0;
+  /* margin-left: 2%; */
+  transition: background-color 0.25s;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+button:hover {
+  background-color: firebrick;
+  transition: background-color 0.25s;
+  color: white;
+}
+button:active {
+  background-color: lightsalmon;
+  color: white;
+}
+
+/*
+* GRID LAYOUT
+* Lg screens >1000px = 4 col
+* Md screens >700px and <=1000px = 3 col
+* Sm screens >500px and <= 700px = 2 col
+* x-sm screens <=500 = 1 col
+*/
+.ajax-section {
+  margin: 50px 0;
+}
+
+.ajax-section .cities {
+  display: grid;
+  grid-gap: 32px 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ajax-section .city {
+  position: relative;
+  padding: 30px 20px;
+  border-radius: 15px;
+  background-color: white;
+  color: gray;
+}
+
+.ajax-section figure{
+  background-color: lime;
+  margin: 0;
+  padding:0;
+}
+
+.ajax-section figure img{
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: lightseagreen;
+}
+
+.ajax-section .figure-container{
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.ajax-section figcaption {
+  /* padding-top: 10px; */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 auto;
+}
+
+.ajax-section .city-temp {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: midnightblue;
+  margin: 0 auto;
+}
+
+.ajax-section .city sup {
+  font-size: 0.75em;
+}
+
+.ajax-section .city-name {
+  font-size: 1.25rem;
+  margin: 0 auto;
+}
+
+figure {
+  margin: 0 auto;
+  padding: 5px 0;
+}
+
+.ajax-section .city-name sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  letter-spacing: 0.15rem;
+
+  color: navajowhite;
+  background-color: orangered;
+}
+
+.ajax-section .city-icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+/* -- DISPLAY CLASSES */
+.noDisplay{
+  display: none;
+}
+
+.yesDisplay{
+  display: inline-block;
+}
+
+
+
+/*
+* -- FOOTER STYLES --
+*/
+footer {
+  background-color: rgb(42, 49, 56);
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  min-height: 100px;
+}
+
+.footer-text {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*
+* -- MEDIA QUERIES --
+*/
+@media only screen and (max-width: 1000px) {
+  footer{
+    height: 125px;
+  }
+
+  .ajax-section .cities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 933px) {
+  .ajax-section .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 3px 0;
+  }
+  button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .ajax-section .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .ajax-section .cities {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ajax-section .city {
+    padding: 20px 20px 10px;
+  }
+
+  .ajax-section figure {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  figure img{
+    width: 75px;
+    margin: 0 auto;
+  }
+
+  .ajax-section figcaption {
+    margin: 0;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  input[type="text"] {
+    font-size: 1rem;
+  }
+}
