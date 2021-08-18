@@ -59,8 +59,7 @@ form.addEventListener("submit", e => {
     .then(data => {
       //Gather city data and assign to variables
       const { main, name, sys, weather } = data;
-      const icon = `https://openweathermap.org/img/wn/${weather[0]["icon"]
-        }@2x.png`;
+      const icon = `img/${weather[0]["icon"]}.svg`;
       const li = document.createElement("LI");
       const markup = `
             <div class="row">
