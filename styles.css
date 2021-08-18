@@ -5,12 +5,6 @@ html {
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   font-size: 100%;
   font-weight: 400;
-  /* background: #28045c;
-  background: -webkit-linear-gradient(top left, #28045c, #c33501);
-  background: -moz-linear-gradient(top left, #28045c, #c33501);
-  background: linear-gradient(to bottom right, #28045c, #c33501);
-  background-repeat: no-repeat;
-  background-size: cover; */
   padding: 0;
   margin: 0;
 }
@@ -158,6 +152,7 @@ button:active {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
+  padding-bottom: 5px;
   /* background-color: lightseagreen; */
 }
 
@@ -179,6 +174,7 @@ button:active {
   margin-top: 10px;
   color: midnightblue;
   margin: 0 auto;
+  padding-bottom: 0;
 }
 
 .ajax-section .city sup {
@@ -223,26 +219,15 @@ figure {
 * -- FOOTER STYLES --
 */
 footer {
-  background-color: rgb(42, 49, 56);
   margin: 0;
-  position: absolute;
+  position: relative;
   bottom: 0;
-  min-height: 100px;
-}
-
-.footer-text {
-  width: 80%;
-  margin: 0 auto;
 }
 
 /*
 * -- MEDIA QUERIES --
 */
 @media only screen and (max-width: 1000px) {
-  footer {
-    height: 125px;
-  }
-
   .ajax-section .cities {
     grid-template-columns: repeat(3, 1fr);
   }
